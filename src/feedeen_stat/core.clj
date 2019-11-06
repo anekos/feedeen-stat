@@ -66,4 +66,4 @@
   ([dev-client-id dev-secret]
    (let [access-token (-> (make-claim dev-client-id) (make-jwt-token dev-secret) get-access-token)
          total (-> (get-items-count access-token :mode "total") :total)]
-     (print total))))
+     (println total))))
