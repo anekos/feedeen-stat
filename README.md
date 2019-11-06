@@ -6,7 +6,7 @@ Feedeen API sample
 
 ```
 $ make build
-$ java -jar feedeen-stat.jar
+$ java -jar feedeen-stat.jar <CLIENT_ID> <SECRET>
 666
 ```
 
