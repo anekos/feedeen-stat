@@ -1,14 +1,17 @@
 # feedeen-stat
 
-A Clojure library designed to ... well, that part is up to you.
+Feedeen API sample
 
 ## Usage
 
-FIXME
+```
+$ make build
+$ java -jar feedeen-stat.jar
+666
+```
 
 ## License
 
-Copyright © 2019 FIXME
+Copyright © 2019 anekos
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
