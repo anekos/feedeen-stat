@@ -23,7 +23,7 @@
 
 (defn make-jwt-token
   [claim dev-secret]
-  (-> claim (jwt/sign dev-secret)))
+  (-> claim (jwt/sign dev-secret {:alg :hs256})))
 
 (defn get-access-token
   [jwt-token]
