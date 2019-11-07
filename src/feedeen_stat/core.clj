@@ -1,8 +1,7 @@
 (ns feedeen-stat.core
   (:gen-class)
   (:require [clj-http.client :as client]
-            [clj-jwt.core  :refer :all]
-            [clj-jwt.key   :refer [private-key public-key]]
+            [buddy.sign.jwt :as jwt]
             [clj-time.core :refer [now plus hours minutes]]
             [clj-time.coerce :refer [to-epoch]]
             [clojure.data.json :as json]))
@@ -24,7 +23,7 @@
 
 (defn make-jwt-token
   [claim dev-secret]
-  (-> claim jwt (sign :HS256 dev-secret) to-str))
+  (-> claim (jwt/sign dev-secret)))
 
 (defn get-access-token
   [jwt-token]
